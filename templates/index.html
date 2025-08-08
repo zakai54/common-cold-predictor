@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Common Cold Predictor</title>
+    <link rel="stylesheet" href="/static/css/main.css">
+    <link rel="stylesheet" href="/static/css/custom.css">
+    <noscript><link rel="stylesheet" href="/static/css/noscript.css"></noscript>
+</head>
+<body>
+    <div id="wrapper">
+        <header id="header">
+            <a href="/" class="logo">Cold Predictor</a>
+            <nav id="nav">
+                <ul class="links">
+                    <li><a href="/">Predictor</a></li>
+                    <li><a href="/about">About</a></li>
+                    <li><a href="/science">Science</a></li>
+                </ul>
+            </nav>
+        </header>
+
+        <main id="main">
+            <section class="prediction-form">
+                <h1>Common Cold Risk Predictor</h1>
+                <form id="prediction-form">
+                    <div class="form-group">
+                        <label for="age">Age:</label>
+                        <input type="number" id="age" name="age" min="1" max="120" required class="form-input">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="gender">Gender:</label>
+                        <select id="gender" name="gender" required class="form-input">
+                            <option value="" disabled selected>Select gender</option>
+                            <option value="Male">Male</option>
+                            <option value="Female">Female</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="genotype">Genotype:</label>
+                        <select id="genotype" name="genotype" required class="form-input">
+                            <option value="" disabled selected>Select genotype</option>
+                            <option value="AA">AA</option>
+                            <option value="AS">AS</option>
+                            <option value="SS">SS</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="blood_group">Blood Group:</label>
+                        <select id="blood_group" name="blood_group" required class="form-input">
+                            <option value="" disabled selected>Select blood group</option>
+                            <option value="A">A</option>
+                            <option value="B">B</option>
+                            <option value="AB">AB</option>
+                            <option value="O">O</option>
+                        </select>
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="temperature">Temperature (°C):</label>
+                        <input type="number" id="temperature" name="temperature" step="0.1" min="-10" max="40" required class="form-input">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="humidity">Humidity (%):</label>
+                        <input type="number" id="humidity" name="humidity" min="0" max="100" required class="form-input">
+                    </div>
+                    
+                    <div class="form-group">
+                        <label for="air_quality">Air Quality Index:</label>
+                        <input type="number" id="air_quality" name="air_quality" min="0" max="500" required class="form-input">
+                    </div>
+                    
+                    <button type="submit" class="btn-medical">Predict Risk</button>
+                </form>
+                
+                <div id="result-box" class="prediction-result" style="display: none;">
+                    <h3>Prediction Result</h3>
+                    <p id="prediction-result"></p>
+                    <div class="risk-meter">
+                        <span class="risk-level">Low</span>
+                        <span class="risk-level">Medium</span>
+                        <span class="risk-level">High</span>
+                    </div>
+                </div>
+            </section>
+        </main>
+
+        <footer id="footer">
+            <section>
+                <h3>About</h3>
+                <p>A machine learning approach to predicting cold susceptibility.</p>
+            </section>
+            <section>
+                <h3>Contact</h3>
+                <p>health@coldpredictor.com</p>
+            </section>
+        </footer>
+    </div>
+
+    <script src="/static/js/main.js"></script>
+</body>
+</html>

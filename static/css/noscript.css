@@ -1,0 +1,44 @@
+/* NoScript Styles */
+#wrapper {
+    opacity: 1 !important;
+}
+
+#header {
+    background: #2a2f4a !important;
+}
+
+#nav {
+    display: block !important;
+}
+
+/* Form Fallback */
+.prediction-form {
+    opacity: 1 !important;
+}
+
+/* Risk Meter Fallback */
+.risk-meter {
+    background: #e0e0e0 !important;
+    text-align: center;
+    padding: 1rem;
+}
+
+.risk-meter::after {
+    content: "Enable JavaScript for interactive risk assessment";
+    display: block;
+    color: #666;
+}
+
+/* Result Fallback */
+.prediction-result {
+    display: block !important;
+    background: #f9f9f9 !important;
+    border-left: 4px solid #ccc !important;
+}
+
+.prediction-result::before {
+    content: "JavaScript is required for live predictions";
+    display: block;
+    margin-bottom: 1rem;
+    color: #666;
+}

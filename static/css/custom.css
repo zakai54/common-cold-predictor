@@ -1,0 +1,58 @@
+:root {
+    --medical-blue: #0072bb;
+    --solana-green: #00ffa3;
+    --crypto-purple: #9945FF;
+    --clean-white: #f8f9fa;
+    --dark-bg: #0d1b2a;
+}
+
+/* Header */
+#header {
+    background: linear-gradient(135deg, var(--dark-bg) 0%, var(--medical-blue) 100%) !important;
+}
+
+/* Forms */
+.prediction-form {
+    background: white;
+    padding: 2rem;
+    border-radius: 12px;
+    box-shadow: 0 5px 25px rgba(0, 114, 187, 0.1);
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.form-input:focus {
+    border-color: var(--medical-blue);
+    box-shadow: 0 0 0 3px rgba(0, 114, 187, 0.2);
+}
+
+/* Buttons */
+.btn-medical {
+    background-color: var(--medical-blue);
+    transition: all 0.3s;
+}
+
+.btn-medical:hover {
+    background-color: #005a8f;
+}
+
+/* Risk Meter */
+.risk-meter {
+    background: #f0f0f0;
+    border-radius: 4px;
+    padding: 0.5rem;
+}
+
+.risk-level {
+    font-weight: bold;
+}
+
+/* Animations */
+@keyframes fadeIn {
+    from { opacity: 0; }
+    to { opacity: 1; }
+}
+
+.prediction-result {
+    animation: fadeIn 0.5s ease-out;
+}
