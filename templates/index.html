@@ -24,7 +24,9 @@
         <main id="main">
             <section class="prediction-form">
                 <h1>Common Cold Risk Predictor</h1>
-                <form id="prediction-form">
+                
+                <!-- CORRECTED: Added action, method, and removed id from form -->
+                <form action="/predict" method="POST">
                     <div class="form-group">
                         <label for="age">Age:</label>
                         <input type="number" id="age" name="age" min="1" max="120" required class="form-input">
@@ -102,6 +104,34 @@
         </footer>
     </div>
 
-    <script src="/static/js/main.js"></script>
+    <!-- Add this JavaScript for better form handling -->
+    <script>
+        document.addEventListener('DOMContentLoaded', function() {
+            const form = document.querySelector('form');
+            
+            form.addEventListener('submit', async function(e) {
+                e.preventDefault();
+                
+                try {
+                    const formData = new FormData(form);
+                    const response = await fetch('/predict', {
+                        method: 'POST',
+                        body: formData
+                    });
+                    
+                    const result = await response.json();
+                    
+                    if (result.error) {
+                        alert('Error: ' + result.error);
+                    } else {
+                        document.getElementById('prediction-result').textContent = result.prediction;
+                        document.getElementById('result-box').style.display = 'block';
+                    }
+                } catch (error) {
+                    alert('An error occurred: ' + error.message);
+                }
+            });
+        });
+    </script>
 </body>
 </html>

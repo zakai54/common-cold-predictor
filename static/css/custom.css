@@ -5,7 +5,37 @@
     --clean-white: #f8f9fa;
     --dark-bg: #0d1b2a;
 }
+/* Error styling */
+.form-input.error {
+    border-color: #ff4757 !important;
+    box-shadow: 0 0 0 2px rgba(255, 71, 87, 0.2) !important;
+}
 
+/* Risk meter styling */
+.risk-meter {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 1rem;
+    padding: 0.5rem;
+    background: #f8f9fa;
+    border-radius: 8px;
+}
+
+.risk-level {
+    transition: all 0.3s ease;
+    padding: 0.5rem;
+    border-radius: 4px;
+}
+
+.risk-level:nth-child(1) { color: #2ed573; } /* Low - green */
+.risk-level:nth-child(2) { color: #ffa502; } /* Medium - orange */
+.risk-level:nth-child(3) { color: #ff4757; } /* High - red */
+
+/* Loading state */
+button:disabled {
+    opacity: 0.7;
+    cursor: not-allowed;
+}
 /* Header */
 #header {
     background: linear-gradient(135deg, var(--dark-bg) 0%, var(--medical-blue) 100%) !important;

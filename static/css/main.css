@@ -18,7 +18,8 @@ body.is-preload #wrapper {
 }
 
 body {
-    background: #f5f5f5;
+    background: #786262;
+    background-image: url(back.jpg);
 }
 
 /* Typography */
@@ -180,13 +181,13 @@ input[type="text"], input[type="email"], input[type="number"], select, textarea 
 .form-group input[type="number"],
 .form-group select,
 .form-group textarea {
-    width: 100%;
+    width: 80%;
     padding: 12px 15px;
     border: 2px solid #e1e8ed;
     border-radius: 8px;
     font-size: 1rem;
     transition: all 0.3s ease;
-    background: white;
+    background: rgb(255, 249, 249);
     -webkit-appearance: none;
     appearance: none;
 }
@@ -201,7 +202,7 @@ input[type="text"], input[type="email"], input[type="number"], select, textarea 
 
 .checkbox-group {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(200px, 1fr));
+    grid-template-columns: repeat(auto-fit, minmax(150px, 1fr));
     gap: 1rem;
     margin: 1rem 0;
 }
